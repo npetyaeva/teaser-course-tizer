@@ -107,38 +107,43 @@ h2 {
 
 .nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 56px; 
-  gap: 16px;
-}
-
-.nav {
-  display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 20px; 
   margin-top: 56px;
+  margin-bottom: 40px;
 }
 
 .btn {
   padding: 12px 32px;
   border-radius: 12px;
   text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 16px;
-  transition: all 0.2s;
+  transition: all 0.25s ease;
+  
   background: rgba(185, 158, 226, 0.2);
-  color: #B99EE2;
+  color: #ffffff;
   border: 1px solid rgba(185, 158, 226, 0.4);
-}
-
-.btn:hover {
-  background: rgba(185, 158, 226, 0.35);
 }
 
 .btn-back {
   background: rgba(185, 158, 226, 0.1);
-  border-color: rgba(185, 158, 226, 0.3);
+  color: #ffffff;
+  border: 1px solid rgba(185, 158, 226, 0.3);
+}
+
+
+.btn:hover,
+.btn-back:hover {
+  background: rgba(185, 158, 226, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(185, 158, 226, 0.5);
+}
+
+.nav .btn:only-child {
+  margin: 0 auto; 
 }
 
 .container {
