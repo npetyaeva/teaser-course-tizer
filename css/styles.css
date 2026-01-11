@@ -36,7 +36,7 @@ body {
   text-transform: uppercase;
   color: #B99EE2;
   letter-spacing: 0.8px;
-  background: rgba(65, 34, 112, 0.23); /*(185, 158, 226, 0.12);*/
+  background: rgba(185, 158, 226, 0.1);
 }
 
 h1 {
@@ -104,7 +104,7 @@ h1 {
 
 .btn {
   display: inline-block;
-  background: #572D95;
+  background: #B99EE2;
   color: #0d001a;
   padding: 14px 48px;
   border-radius: 12px;
