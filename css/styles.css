@@ -154,5 +154,5 @@ h1 {
 }
 
 .icon-circle i {
-  line-height: 1;
+  transform: translateY(0.5px);
 }
