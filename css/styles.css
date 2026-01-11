@@ -116,31 +116,29 @@ h2 {
 .nav {
   display: flex;
   justify-content: space-between;
-  margin-top: 48px;
+  margin-top: 56px;
+  gap: 16px;
 }
 
 .btn {
-  display: inline-block;
-  background: #B99EE2;
-  color: #0d001a;
-  padding: 14px 48px;
+  padding: 12px 32px;
   border-radius: 12px;
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 16px;
-  transition: all 0.25s ease;
+  transition: all 0.2s;
+  background: rgba(185, 158, 226, 0.2);
+  color: #B99EE2;
+  border: 1px solid rgba(185, 158, 226, 0.4);
 }
 
-.btn:hover,
-.btn:active {
-  background: #c8aaff;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(185, 158, 226, 0.4);
+.btn:hover {
+  background: rgba(185, 158, 226, 0.35);
+  transform: translateY(-1px);
 }
 
 .btn-back {
-  background: rgba(185, 158, 226, 0.1); 
+  background: rgba(185, 158, 226, 0.1);
   border-color: rgba(185, 158, 226, 0.3);
 }
 
