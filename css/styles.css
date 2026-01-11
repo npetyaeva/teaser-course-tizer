@@ -125,7 +125,7 @@ h1 {
 .container {
   opacity: 0;
   animation: fadeIn 1.2s forwards;
-  animation-delay: 0.3s; /* небольшая задержка для ощущения плавности */
+  animation-delay: 0.3s;
 }
 
 @keyframes fadeIn {
@@ -139,9 +139,8 @@ h1 {
 }
 
 .icon-circle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  display: inline-block;
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -149,14 +148,16 @@ h1 {
   border: 1px solid rgba(185, 158, 226, 0.2);
   color: #B99EE2;
   margin-right: 12px;
-  font-size: 14px;
-  line-height: 1;
   vertical-align: middle;
 }
 
 .icon-circle i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0;
-  display: block;
 }
