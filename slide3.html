@@ -27,15 +27,27 @@
       <p>Проектировщики среды развития: родители и наставники, стремящиеся понять, как социальные рамки раскрывают или подавляют автономность. в «плато»: те, кто накопил избыточное обучение, но парализован страхом ошибки и не переходит к внедрению</p>
     </div>
 
-    <div class="pagination">
-       <a href="slide2.html" class="arrow-btn arrow-left icon-circle">
-        <i class="fas fa-chevron-left"></i>
-      </a>
-      
-      <a href="slide4.html" class="arrow-btn arrow-right icon-circle">
-        <i class="fas fa-chevron-right"></i>
-      </a>
+    <div class="bottom-nav">
+      <div class="pagination">
+        <span class="arrow-btn disabled">
+          <i class="fas fa-chevron-left"></i>
+        </span>
+        
+        <a href="slide2.html" class="arrow-btn">
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
     </div>
+  </div> <script>
+    if (window.Telegram?.WebApp) {
+      const tg = window.Telegram.WebApp;
+      tg.ready();
+      tg.expand();
+      // Устанавливаем цвет хедера и бэкграунда для TMA
+      tg.setHeaderColor('#0e0d0e');
+      tg.setBackgroundColor('#0e0d0e');
+    }
+  </script>
 
   <script>
     if (window.Telegram?.WebApp) {
