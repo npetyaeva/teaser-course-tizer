@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Игра и творчество в жизни взрослых</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div class="container">
+     <div class="tags">
+      <span class="tag">АУДИТОРИЯ</span>
+    </div>
+    
+    <h2>Для кого этот курс</h2>
+
+    <div class="main-text">
+      <p>уководители и предприниматели: те, кто несет ответственность за результат и стремится искоренить «процесс ради процесса»</p>
+      <p>Креативные профессионалы: авторы, дизайнеры и маркетологи, желающие заменить зависимость от вдохновения стабильной методологией качества</p>
+      <p>Специалисты достигшие когнитивного «плато»: те, кто накопил избыточное обучение, но парализован страхом ошибки и не переходит к внедрению</p>
+      <p>Проектировщики среды развития: родители и наставники, стремящиеся понять, как социальные рамки раскрывают или подавляют автономность. в «плато»: те, кто накопил избыточное обучение, но парализован страхом ошибки и не переходит к внедрению</p>
+    </div>
+
+    <div class="pagination">
+       <a href="slide2.html" class="arrow-btn arrow-left icon-circle">
+        <i class="fas fa-chevron-left"></i>
+      </a>
+      
+      <a href="slide4.html" class="arrow-btn arrow-right icon-circle">
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+
+  <script>
+    if (window.Telegram?.WebApp) {
+      Telegram.WebApp.ready();
+      Telegram.WebApp.expand();
+    }
+  </script>
+</body>
+</html>
