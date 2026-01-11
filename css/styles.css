@@ -139,8 +139,9 @@ h1 {
 }
 
 .icon-circle {
-  position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -149,14 +150,13 @@ h1 {
   color: #B99EE2;
   margin-right: 12px;
   font-size: 14px;
+  line-height: 1;
+  vertical-align: middle;
 }
 
 .icon-circle i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   line-height: 1;
   margin: 0;
   padding: 0;
+  display: block;
 }
