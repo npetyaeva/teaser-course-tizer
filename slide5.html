@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Игра и творчество в жизни взрослых</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div class="container">
+     <div class="tags">
+      <span class="tag">УЧАСТИЕ</span>
+    </div>
+    
+    <h2>Выберите формат</h2>
+
+    <div class="main-text">
+      <p>Базовый (30 000 ₽): Только теория.</p>
+      <p>Стандарт (40 000 ₽): Весь курс + практика и шаблоны.</p>
+      <p>Премиум (60 000 ₽): Всё обучение + личный разбор кейса.</p>
+    </div>
+
+    <div class="pagination">
+       <a href="slide4.html" class="arrow-btn arrow-left icon-circle">
+        <i class="fas fa-chevron-left"></i>
+      </a>
+      
+      <a href="slide6.html" class="arrow-btn arrow-right icon-circle">
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+
+  <script>
+    if (window.Telegram?.WebApp) {
+      Telegram.WebApp.ready();
+      Telegram.WebApp.expand();
+    }
+  </script>
+</body>
+</html>
