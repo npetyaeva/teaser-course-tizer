@@ -1,12 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  background: #0d001a url('../images/bg-abstract.jpg') no-repeat center center / cover fixed;
+  background: #0d001a url('../images/bg_1.webp') no-repeat center center / cover fixed;
+  background-blend-mode: overlay;
+  background-color: rgba(14, 13, 14, 0.75); 
   color: #e8eaed;
   font-family: 'Montserrat', system-ui, sans-serif;
   min-height: 100vh;
-  background-blend-mode: overlay;
-  background-color: rgba(13, 0, 26, 0.85);
 }
 
 .container {
@@ -120,4 +120,15 @@ h1 {
   background: #c8aaff;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(185, 158, 226, 0.4);
+}
+
+.container {
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+  animation-delay: 0.3s; /* небольшая задержка для ощущения плавности */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
