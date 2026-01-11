@@ -132,3 +132,22 @@ h1 {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+.dates p i {
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(185, 158, 226, 0.15);
+  border: 1px solid rgba(185, 158, 226, 0.5);
+  color: #B99EE2;
+  margin-right: 12px;
+  font-size: 16px;
+}
