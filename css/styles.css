@@ -138,7 +138,7 @@ h2 {
 .btn-back:hover {
   background: rgba(185, 158, 226, 0.35);
   transform: translateY(-2px);
-  box-shadow: 0 0 12px rgba(185, 158, 226, 0.5);
+  box-shadow: 0 0 20px rgba(185, 158, 226, 0.1);
 }
 
 .nav .btn:only-child {
