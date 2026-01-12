@@ -27,7 +27,7 @@
           <button onclick="sendOrder('Базовый')" class="buy-btn">Выбрать</button>
         </div>
         <div class="price-right">
-          <p>Теоретический блок (4 встречи) + доступ к записям.</p>
+          <p>Теоретический блок (4 встречи) + доступ к записям.</p>
         </div>
       </div>
 
@@ -38,7 +38,7 @@
           <button onclick="sendOrder('Стандарт')" class="buy-btn">Выбрать</button>
         </div>
         <div class="price-right">
-          <p>Все встречи + записи + шаблоны в закрытой группе.</p>
+          <p>Все встречи + записи + шаблоны в закрытой группе.</p>
         </div>
       </div>
 
@@ -49,13 +49,13 @@
           <button onclick="sendOrder('Премиум')" class="buy-btn">Выбрать</button>
         </div>
         <div class="price-right">
-          <p>Весь курс + персональная обратная связь и разбор кейса.</p>
+          <p>Весь курс + персональная обратная связь и разбор кейса.</p>
         </div>
       </div>
 
       <div class="help-section">
         <a href="https://t.me/AST_rulang" class="support-link">
-          <i class="fas fa-question-circle"></i> Остались вопросы? Пишите в личку
+          <i class="fas fa-question-circle"></i> Остались вопросы? Пишите в личку
         </a>
       </div>
     </div>
@@ -83,25 +83,20 @@
       tg.setBackgroundColor('#0e0d0e');
     }
 
-    // Функция отправки заявки менеджеру
     function sendOrder(tariff) {
-      const adminUsername = "sophia_petyaeva"; // Аккаунт менеджера
+      const adminUsername = "sophia_petyaeva";
       
-      // Формируем текст сообщения
       const message = `Здравствуйте! Хочу записаться на курс «Игра и творчество». %0AФормат: ${tariff}`;
       
-      // Ссылка для открытия чата с подставленным текстом
       const link = `https://t.me/${adminUsername}?text=${message}`;
 
-      // Вибрация (тактильный отклик)
       if (tg && tg.HapticFeedback) {
         tg.HapticFeedback.impactOccurred('medium');
       }
 
-      // Переход в чат
       if (tg) {
         tg.openTelegramLink(link);
-        // Закрываем приложение, чтобы клиент сразу видел чат
+
         setTimeout(() => {
           tg.close();
         }, 800);
