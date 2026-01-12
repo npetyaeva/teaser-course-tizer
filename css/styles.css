@@ -16,6 +16,9 @@ body {
   text-align: center;
   position: relative;
   z-index: 2;
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+  animation-delay: 0.3s;
 }
 
 .tags {
@@ -106,6 +109,11 @@ h2 {
   color: #FFFFFF;
 }
 
+.dates p i {
+  margin-right: 12px;
+  font-size: 18px;
+}
+
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -124,15 +132,11 @@ h2 {
 
 .pagination {
   position: relative;
-  bottom: auto;
-  left: auto;
-  right: auto;
   width: 100%;
   max-width: 480px;
   display: flex;
   justify-content: space-between;
   padding: 0 32px;
-  z-index: 10;
   align-items: center; 
 }
 
@@ -166,20 +170,9 @@ h2 {
   pointer-events: none; 
 }
 
-.container {
-  opacity: 0;
-  animation: fadeIn 1.2s forwards;
-  animation-delay: 0.3s;
-}
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
-}
-
-.dates p i {
-  margin-right: 12px;
-  font-size: 18px;
 }
 
 .main-text p {
@@ -210,8 +203,6 @@ h2 {
   transform: translate(-50%, -50%) scale(0.7);
   font-size: 14px;
   line-height: 1;
-  margin: 0;
-  padding: 0;
 }
 
 .price-card {
@@ -272,6 +263,9 @@ h2 {
   border-radius: 8px;
   text-transform: uppercase;
   transition: all 0.3s ease;
+  border: none;
+  width: 100%;
+  cursor: pointer;
 }
 
 .buy-btn:hover {
@@ -312,13 +306,10 @@ summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 12px;
   outline: none;
 }
 
-summary::-webkit-details-marker { 
-  display: none; 
-}
+summary::-webkit-details-marker { display: none; }
 
 summary::after {
   content: '\f078'; 
@@ -333,15 +324,10 @@ details[open] summary::after {
 }
 
 details p {
-  margin: 0px 0 8px;
+  margin: 8px 0 8px;
   font-size: 13px;
   line-height: 1.5;
   color: #e8eaed;
-  animation: fadeIn 0.4s ease;
-}
-
-details summary + p {
-  margin-top: 12px !important;
 }
 
 .block-title {
@@ -364,7 +350,6 @@ details summary + p {
 
 .benefit-content p {
   margin: 0 !important;
-  padding: 0 !important;
   line-height: 1.5;
 }
 
@@ -372,16 +357,8 @@ details summary + p {
   display: block;
   font-weight: 500;
   font-size: 16px;
-  /*text-transform: uppercase;*/
   color: #B99EE2;
   margin-bottom: 4px;
-}
-
-.main-text p {
-  margin-bottom: 24px;
-  line-height: 1.6;
-  font-size: 14px;
-  color: #e8eaed;
 }
 
 .accent-text {
@@ -410,15 +387,8 @@ details summary + p {
   line-height: 1.5;
 }
 
-.pos-1-3 {
-  grid-column: 1 / 4;
-  text-align: left;
-}
-
-.pos-2-4 {
-  grid-column: 2 / 5;
-  text-align: left;
-}
+.pos-1-3 { grid-column: 1 / 4; }
+.pos-2-4 { grid-column: 2 / 5; }
 
 .accent {
   color: #B99EE2;
@@ -436,4 +406,27 @@ details summary + p {
   font-size: 13px;
   color: #B99EE2;
   font-weight: 500;
+}
+
+.help-section {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.support-link {
+  color: rgba(185, 158, 226, 0.8) !important;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.support-link:hover {
+  color: #B99EE2 !important;
+}
+
+.support-link i {
+  font-size: 16px;
 }
