@@ -27,7 +27,7 @@
           <button onclick="sendOrder('Базовый')" class="buy-btn">Выбрать</button>
         </div>
         <div class="price-right">
-          <p>Теоретический блок (4 встречи) + доступ к записям.</p>
+          <p>Теоретический блок (4 встречи) + доступ к записям</p>
         </div>
       </div>
 
@@ -38,7 +38,7 @@
           <button onclick="sendOrder('Стандарт')" class="buy-btn">Выбрать</button>
         </div>
         <div class="price-right">
-          <p>Все встречи + записи + шаблоны в закрытой группе.</p>
+          <p>Все встречи + записи + шаблоны в закрытой группе</p>
         </div>
       </div>
 
@@ -49,13 +49,13 @@
           <button onclick="sendOrder('Премиум')" class="buy-btn">Выбрать</button>
         </div>
         <div class="price-right">
-          <p>Весь курс + персональная обратная связь и разбор кейса.</p>
+          <p>Весь курс + персональная обратная связь и разбор кейса</p>
         </div>
       </div>
 
       <div class="help-section">
-        <a href="https://t.me/AST_rulang" class="support-link">
-          <i class="fas fa-question-circle"></i> Остались вопросы? Пишите в личку
+        <a href="javascript:void(0)" onclick="askQuestion()" class="support-link">
+          <i class="fas fa-comments"></i> Получить консультацию по курсу
         </a>
       </div>
     </div>
@@ -73,7 +73,7 @@
   </div>
    
   <script>
-    // Инициализация Telegram Web App
+
     const tg = window.Telegram?.WebApp;
     
     if (tg) {
@@ -100,6 +100,23 @@
         setTimeout(() => {
           tg.close();
         }, 800);
+      } else {
+        window.open(link, '_blank');
+      }
+    }
+
+    function askQuestion() {
+      const adminUsername = "sophia_petyaeva";
+
+      const text = encodeURIComponent(`Здравствуйте! У меня есть вопрос по курсу «Игра и творчество». `);
+      const link = `https://t.me/${adminUsername}?text=${text}`;
+    
+      if (tg && tg.HapticFeedback) {
+        tg.HapticFeedback.selectionChanged();
+      }
+    
+      if (tg && tg.openTelegramLink) {
+        tg.openTelegramLink(link);
       } else {
         window.open(link, '_blank');
       }
