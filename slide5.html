@@ -16,52 +16,86 @@
   <div class="container">
      <div class="tags">
       <span class="tag">УЧАСТИЕ</span>
-    </div>
+	 </div>
     
-    <h2>Выберите формат</h2>
+     <h2>Выберите формат</h2>
 
-  <div class="main-text">
-      <div class="price-card">
-        <div class="price-title">Базовый</div>
-        <div class="price-value">30 000 ₽</div>
-        <p>Теоретический блок (4 встречи) + доступ к записям.</p>
-      </div>
+		<div class="main-text">
+		  <div class="price-card">
+			<div class="price-left">
+			  <div class="price-title">Базовый</div>
+			  <div class="price-value">30 000</div>
+			  <button onclick="selectTariff('Базовый')" class="buy-btn">Выбрать</button>
+			</div>
+			<div class="price-right">
+			  <p>Теоретический блок (4 встречи) + доступ к записям.</p>
+			</div>
+		  </div>
 
-      <div class="price-card featured">
-        <div class="price-title">Стандарт</div>
-        <div class="price-value">40 000 ₽</div>
-        <p>Все встречи + записи + шаблоны в закрытой группе.</p>
-      </div>
+		  <div class="price-card">
+			<div class="price-left">
+			  <div class="price-title">Стандарт</div>
+			  <div class="price-value">40 000</div>
+			  <button onclick="selectTariff('Стандарт')" class="buy-btn">Выбрать</button>
+			</div>
+			<div class="price-right">
+			  <p>Все встречи + записи + шаблоны в закрытой группе.</p>
+			</div>
+		  </div>
 
-      <div class="price-card">
-        <div class="price-title">Премиум</div>
-        <div class="price-value">60 000 ₽</div>
-        <p>Весь курс + персональная обратная связь и разбор кейса.</p>
-      </div>
-    </div>
-  </div>
+		  <div class="price-card">
+			<div class="price-left">
+			  <div class="price-title">Премиум</div>
+			  <div class="price-value">60 000</div>
+			  <button onclick="selectTariff('Премиум')" class="buy-btn">Выбрать</button>
+			</div>
+			<div class="price-right">
+			  <p>Весь курс + персональная обратная связь и разбор кейса.</p>
+			</div>
+		  </div>
 
-  <div class="bottom-nav">
-      <div class="pagination">
-        <a href="slide4.html" class="arrow-btn">
-          <i class="fas fa-chevron-left"></i>
-        </a>
-        
-        <span class="arrow-btn disabled">
-          <i class="fas fa-chevron-right"></i>
-        </span>
-      </div>
-  </div>
- 
+		  <div class="help-section">
+			<a href="https://t.me/AST_rulang" class="support-link">
+			  <i class="fas fa-question-circle"></i> Остались вопросы? Пишите в личку
+			</a>
+		  </div>
+		</div>
+	</div>
+
+   <div class="bottom-nav">
+	  <div class="pagination">
+		<a href="slide4.html" class="arrow-btn">
+		  <i class="fas fa-chevron-left"></i>
+		</a>
+		
+		<span class="arrow-btn disabled">
+		  <i class="fas fa-chevron-right"></i>
+		</span>
+	  </div>
+   </div>
+   
   <script>
-    if (window.Telegram?.WebApp) {
-      const tg = window.Telegram.WebApp;
-      tg.ready();
-      tg.expand();
-      tg.setHeaderColor('#0e0d0e');
-      tg.setBackgroundColor('#0e0d0e');
+  const tg = window.Telegram?.WebApp;
+  
+  if (tg) {
+    tg.ready();
+    tg.expand();
+    tg.setHeaderColor('#0e0d0e');
+    tg.setBackgroundColor('#0e0d0e');
+  }
+
+  function selectTariff(name) {
+    // ЗАМЕНИТЕ на юзернейм вашего бота
+    const botName = 'YourBotUsername'; 
+    const link = `https://t.me/${botName}?start=${name}`;
+    
+    if (tg) {
+      tg.openTelegramLink(link);
+    } else {
+      window.open(link, '_blank');
     }
-  </script>
+  }
+</script>
 
 </body>
 </html>
