@@ -6,96 +6,82 @@
   <title>Игра и творчество в жизни взрослых</title>
   
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
 
-	<a href="slide4.html" class="arrow-btn left">
-		 <i class="fas fa-chevron-left"></i>
-	  </a>
+  <a href="slide4.html" class="arrow-btn left">
+    <i class="fas fa-chevron-left"></i>
+  </a>
 
-	  <a href="#" class="arrow-btn right disabled">
-		 <i class="fas fa-chevron-right"></i>
-	  </a>
+  <a href="#" class="arrow-btn right disabled">
+    <i class="fas fa-chevron-right"></i>
+  </a>
 
-	  <div class="dots-nav">
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot active"></div>
-	  </div>
+  <div class="dots-nav">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot active"></div>
+  </div>
 
   <div class="container">
-     <div class="tags">
+    <div class="tags">
       <span class="tag">УЧАСТИЕ</span>
-	 </div>
+    </div>
     
-     <h2>Выберите формат</h2>
+    <h2>Выберите формат</h2>
 
-		<div class="main-text">
-		  <div class="price-card">
-			<div class="price-left">
-			  <div class="price-title">Базовый</div>
-			  <div class="price-value">30 000</div>
-			  <button onclick="selectTariff('Базовый')" class="buy-btn">Выбрать</button>
-			</div>
-			<div class="price-right">
-			  <p>Теоретический блок (4 встречи) + доступ к записям.</p>
-			</div>
-		  </div>
+    <div class="main-text">
+      <div class="price-card">
+        <div class="price-left">
+          <div class="price-title">Базовый</div>
+          <div class="price-value">30 000</div>
+          <button onclick="selectTariff('Базовый', '30 000 руб.')" class="buy-btn">Выбрать</button>
+        </div>
+        <div class="price-right">
+          <p>Теоретический блок (4 встречи) + доступ к записям.</p>
+        </div>
+      </div>
 
-		  <div class="price-card">
-			<div class="price-left">
-			  <div class="price-title">Стандарт</div>
-			  <div class="price-value">45 000</div>
-			  <button onclick="selectTariff('Стандарт')" class="buy-btn">Выбрать</button>
-			</div>
-			<div class="price-right">
-			  <p>Все встречи + записи + шаблоны в закрытой группе.</p>
-			</div>
-		  </div>
+      <div class="price-card">
+        <div class="price-left">
+          <div class="price-title">Стандарт</div>
+          <div class="price-value">45 000</div>
+          <button onclick="selectTariff('Стандарт', '45 000 руб.')" class="buy-btn">Выбрать</button>
+        </div>
+        <div class="price-right">
+          <p>Все встречи + записи + шаблоны в закрытой группе.</p>
+        </div>
+      </div>
 
-		  <div class="price-card">
-			<div class="price-left">
-			  <div class="price-title">Премиум</div>
-			  <div class="price-value">60 000</div>
-			  <button onclick="selectTariff('Премиум')" class="buy-btn">Выбрать</button>
-			</div>
-			<div class="price-right">
-			  <p>Весь курс + персональная обратная связь и разбор кейса.</p>
-			</div>
-		  </div>
-			
-		  <div>
-			<p class="text-italic-transparent">Цена в долларах или в евро: кросс-курс Google на день оплаты. Оплата также возможна и в USDT.</p>
-		  </div>
-		  
-		  <div class="help-section">
-			<a href="https://t.me/AST_rulang" class="support-link">
-			  <i class="fas fa-question-circle"></i> Остались вопросы? Пишите в личку
-			</a>
-		  </div>
-		</div>
-	</div>
+      <div class="price-card">
+        <div class="price-left">
+          <div class="price-title">Премиум</div>
+          <div class="price-value">60 000</div>
+          <button onclick="selectTariff('Премиум', '60 000 руб.')" class="buy-btn">Выбрать</button>
+        </div>
+        <div class="price-right">
+          <p>Весь курс + персональная обратная связь и разбор кейса.</p>
+        </div>
+      </div>
+        
+      <div>
+        <p class="text-italic-transparent">Цена в долларах или в евро: кросс-курс Google на день оплаты. Оплата также возможна и в USDT.</p>
+      </div>
+      
+      <div class="help-section">
+        <a href="javascript:void(0)" onclick="askQuestion()" class="support-link">
+          <i class="fas fa-question-circle"></i> Остались вопросы? Пишите в личку
+        </a>
+      </div>
+    </div>
+  </div>
 
- <!--  <div class="bottom-nav">
-	  <div class="pagination">
-		<a href="slide4.html" class="arrow-btn">
-		  <i class="fas fa-chevron-left"></i>
-		</a>
-		
-		<span class="arrow-btn disabled">
-		  <i class="fas fa-chevron-right"></i>
-		</span>
-	  </div>
-   </div>-->
-   
-  <script>
+<script>
   const tg = window.Telegram?.WebApp;
   
   if (tg) {
@@ -105,16 +91,42 @@
     tg.setBackgroundColor('#0e0d0e');
   }
 
-  function selectTariff(name) {
-    // ЗАМЕНИТЕ на юзернейм вашего бота
-    const botName = 'go2okr_team'; 
-    const link = `https://t.me/${botName}?start=${name}`;
-    
+  // Функция для обработки клика и закрытия
+  function handleAction(link) {
     if (tg) {
       tg.openTelegramLink(link);
+      // Закрываем приложение, чтобы пользователь сразу оказался в чате
+      setTimeout(() => {
+        tg.close();
+      }, 300);
     } else {
       window.open(link, '_blank');
     }
+  }
+
+  function selectTariff(tariff, price) {
+    const botName = 'go2okr_team';
+    const course = "Игра и Творчество";
+    // Получаем никнейм пользователя
+    const user = tg?.initDataUnsafe?.user?.username ? `@${tg.initDataUnsafe.user.username}` : "Без никнейма";
+    
+    // Формируем текст: курс / тариф / цена / ник
+    const message = `${course} / ${tariff} / ${price} / ${user}`;
+    const link = `https://t.me/${botName}?text=${encodeURIComponent(message)}`;
+    
+    handleAction(link);
+  }
+
+  function askQuestion() {
+    const adminUsername = "AST_rulang";
+    const text = "Здравствуйте! У меня есть вопрос по курсу «Игра и творчество»";
+    const link = `https://t.me/${adminUsername}?text=${encodeURIComponent(text)}`;
+
+    if (tg && tg.HapticFeedback) {
+      tg.HapticFeedback.selectionChanged();
+    }
+    
+    handleAction(link);
   }
 </script>
 
