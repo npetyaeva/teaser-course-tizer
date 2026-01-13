@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Игра и творчество в жизни взрослых</title>
   
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <link rel="preload" as="image" href="images/bg_2.webp">
 
@@ -15,32 +15,54 @@
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
+
+	<a href="#" class="arrow-btn left disabled">
+		 <i class="fas fa-chevron-left"></i>
+	  </a>
+
+	  <a href="slide2.html" class="arrow-btn right">
+		 <i class="fas fa-chevron-right"></i>
+	  </a>
+
+	  <div class="dots-nav">
+		<div class="dot active"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+	  </div>
+
   <div class="container">
     <!-- Тэги ALL CAPS -->
     <div class="tags">
       <span class="tag">ОНЛАЙН-КУРС</span>
-      <span class="tag">6 ЗАНЯТИЙ</span>
+      <!--<span class="tag">6 ЗАНЯТИЙ</span>-->
     </div>
 
-    <h1>Игра и творчество<br>в жизни взрослых людей</h1>
+    <h1>Игра и творчество<br>в жизни взрослых людей</h1>
 
     <div class="author">
       <img src="images/author-photo.jpg" alt="Фото автора" class="author-photo">
       <div class="author-info">
         <p class="author-name">НИКОЛАЙ ПЕТЯЕВ</p>
-        <p class="author-desc">Автор и ведущий курса,<br>кандидат философских наук,<br>магистр психологии,<br>основатель Академии<br>Структурной Типологии</p>
+        <p class="author-desc">Автор и ведущий курса,<br>кандидат философских наук,<br>магистр психологии</p>
       </div>
     </div>
 
     <div class="dates">
-      <p class="dates-title">Начало курса</p>
-      <p><span class="icon-circle"><i class="fas fa-calendar-day"></i></span>25 января 2026 г.</p>
-      <p><span class="icon-circle"><i class="fas fa-clock"></i></span>19:00–21:00 (МСК)</p>
+      <!--<p class="dates-title">Начало курса</p>-->
+      <p><span class="icon-circle"><i class="fas fa-graduation-cap"></i></span>6 занятий (пн, чт)</p>
+      <p><span class="icon-circle"><i class="fas fa-calendar-day"></i></span>
+	  <span>
+		  <span>Январь:</span> 26, 29 <br>
+		  <span>Февраль:</span> 2, 5, 9, 12
+	  </span></p>
+	  <p><span class="icon-circle"><i class="fas fa-clock"></i></span>18:00–20:00 (МСК)</p>
+
     </div>
   </div>
 
-  <div class="bottom-nav">
-    <div class="pagination">
+ <!--  <div class="pagination">
       <span class="arrow-btn disabled">
         <i class="fas fa-chevron-left"></i>
       </span>
@@ -49,7 +71,7 @@
         <i class="fas fa-chevron-right"></i>
       </a>
     </div>
-  </div>
+  </div>-->
 
   <script>
     if (window.Telegram?.WebApp) {
