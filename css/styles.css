@@ -405,7 +405,7 @@ details[open] summary::after {
 .benefit-item {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
+  gap: 8px;
   margin-bottom: 20px;
   text-align: left;
 }
