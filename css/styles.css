@@ -268,7 +268,7 @@ h2 {
 
 .price-card {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 20px;
   background: rgba(185, 158, 226, 0.05);
   border: 1px solid rgba(185, 158, 226, 0.2);
@@ -279,7 +279,7 @@ h2 {
 }
 
 .price-left {
-  flex: 0 0 120px;
+  flex: 0 0 95px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -289,6 +289,8 @@ h2 {
 
 .price-right {
   flex: 1;
+  display: flex;
+  padding-left: 0;
 }
 
 .price-title {
@@ -314,19 +316,19 @@ h2 {
 
 .buy-btn {
   display: inline-block;
-  padding: 8px 0;
+  padding: 8px 16px; 
   background: #B99EE2;
-  border: 1px solid rgba(185, 158, 226);
   color: #0e0d0e;
   text-decoration: none;
   font-size: 11px;
   font-weight: 600;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 6px;
   text-transform: uppercase;
   transition: all 0.3s ease;
   border: none;
-  width: 100%;
+  width: fit-content; 
+  align-self: flex-start;
   cursor: pointer;
 }
 
