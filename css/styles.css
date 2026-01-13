@@ -12,13 +12,14 @@ body {
 .container {
   max-width: 480px;
   margin: 0 auto;
-  padding: 30px 24px 120px;
+  padding: 35px 55px 120px;
   text-align: center;
   position: relative;
   z-index: 2;
   opacity: 0;
   animation: fadeIn 1.2s forwards;
   animation-delay: 0.3s;
+  box-sizing: border-box;
 }
 
 .tags {
@@ -46,17 +47,31 @@ h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 36px;
-  line-height: 1.2;
+  line-height: 1.1;
   margin: 0 0 48px;
   color: #FFFFFF;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.1;
   color: #FFFFFF;
-  margin: 0 0 32px;
+  margin: 0 0 40px;
+}
+
+
+.main-text p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 24px;
+  color: #e8eaed;
+  font-weight: 300;
+}
+
+.text-italic-transparent {
+  font-size: 10px;
+  opacity: 0.7;
 }
 
 .author {
@@ -94,15 +109,18 @@ h2 {
   margin: 4px 0 0;
 }
 
-.dates-title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  margin: 0 0 20px;
-  color: #B99EE2;
+.dates {
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto;
 }
 
 .dates p {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+  gap: 0;
+  text-align: left; 
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -113,6 +131,10 @@ h2 {
 .dates p i {
   margin-right: 12px;
   font-size: 18px;
+}
+
+.dates .icon-circle {
+  flex-shrink: 0;
 }
 
 .bottom-nav {
@@ -169,19 +191,57 @@ h2 {
   background: rgba(185, 158, 226, 0.08);
   border-color: rgba(185, 158, 226, 0.15);
   pointer-events: none; 
+  display: none; 
+}
+
+.arrow-btn.left, .arrow-btn.right {
+  position: fixed;
+  top: 50%;
+  /*transform: translateY(-50%);*/
+  z-index: 1000;
+}
+
+.arrow-btn.left {
+  left: 12px;
+}
+
+.arrow-btn.right {
+  right: 12px;
+}
+
+.dots-nav {
+  position: fixed;
+  bottom: 30px;    /* Фиксация внизу */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  padding: 10px 18px;
+  background: rgba(14, 13, 14, 0.5); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 24px;
+  border: 1px solid rgba(185, 158, 226, 0.2);
+  z-index: 1000;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(185, 158, 226, 0.2);
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #B99EE2;
+  box-shadow: 0 0 10px rgba(185, 158, 226, 0.6);
+  transform: scale(1.2);
 }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
-}
-
-.main-text p {
-  font-size: 14px;
-  line-height: 1.6;
-  margin: 0 0 24px;
-  color: #e8eaed;
-  font-weight: 200;
 }
 
 .icon-circle {
@@ -249,13 +309,14 @@ h2 {
 .price-value::after {
   content: ' ₽';
   font-size: 14px;
-  color: #B99EE2;
+  color: #FFFFFF;
 }
 
 .buy-btn {
   display: inline-block;
   padding: 8px 0;
   background: #B99EE2;
+  border: 1px solid rgba(185, 158, 226);
   color: #0e0d0e;
   text-decoration: none;
   font-size: 11px;
@@ -270,14 +331,14 @@ h2 {
 }
 
 .buy-btn:hover {
-  background: #FFFFFF;
-  transform: translateY(-2px);
+  background: rgba(185, 158, 226, 0.5);
+  /*transform: translateY(-2px);*/
 }
 
 .price-right p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
-  color: #e8eaed;
+  /*color: #e8eaed;*/
   margin: 0;
 }
 
@@ -288,7 +349,7 @@ h2 {
 }
 
 details {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   text-align: left;
   background: rgba(185, 158, 226, 0.05);
   border: 1px solid rgba(185, 158, 226, 0.2);
@@ -324,11 +385,9 @@ details[open] summary::after {
   transform: rotate(180deg);
 }
 
-details p {
-  margin: 8px 0 8px;
-  font-size: 13px;
-  line-height: 1.5;
-  color: #e8eaed;
+.main-text details p {
+  margin-top: 16px;
+  margin-bottom: 0px;
 }
 
 .block-title {
@@ -380,6 +439,7 @@ details p {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px 10px;
   text-align: left;
+  width: 100%
 }
 
 .grid-item p {
@@ -400,13 +460,13 @@ details p {
   grid-column: 1 / 5;
   height: 1px;
   background: rgba(185, 158, 226, 0.2);
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .summary p {
-  font-size: 13px;
+  font-size: 14px;
   color: #B99EE2;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .help-section {
