@@ -74,12 +74,14 @@
         <p class="text-italic-transparent">Возможна оплата в USD, EUR (расчет по кросс-курсу Google на день оплаты) и USDT.</p>
       </div>
 
-	  <div class="help-section">
-		  <a href="https://t.me/NikPetyaev" class="support-link" style="align-items: flex-start;">
-		    <i class="fas fa-question-circle" style="align-self: flex-start;"></i> 
-		    По всем вопросам и для оплаты в валюте — пишите в личку.
-		  </a>
+	<div class="help-section">
+	  <a href="javascript:void(0)" onclick="askQuestion()" class="support-link" style="align-items: flex-start;">
+	    <i class="fas fa-question-circle" style="align-self: flex-start;"></i> 
+	    По всем вопросам и для оплаты в валюте — пишите в личку.
+	  </a>
+	</div>
   </div>
+	  
 
 <script>
   const tg = window.Telegram?.WebApp;
@@ -91,18 +93,16 @@
     tg.setBackgroundColor('#0e0d0e');
   }
 
-  // Функция для обработки клика и закрытия
-  function handleAction(link) {
+/*  function handleAction(link) {
     if (tg) {
       tg.openTelegramLink(link);
-      // Закрываем приложение, чтобы пользователь сразу оказался в чате
       setTimeout(() => {
         tg.close();
       }, 300);
     } else {
       window.open(link, '_blank');
     }
-  }
+  }*/
 
   function selectTariff(tariff, price) {
     const botName = 'go2okr_team';
@@ -117,8 +117,8 @@
     handleAction(link);
   }
 
- /* function askQuestion() {
-    const adminUsername = "AST_rulang";
+  function askQuestion() {
+    const adminUsername = "NikPetyaev";
     const text = "Здравствуйте! У меня есть вопрос по курсу «Игра и творчество»";
     const link = `https://t.me/${adminUsername}?text=${encodeURIComponent(text)}`;
 
@@ -127,7 +127,7 @@
     }
     
     handleAction(link);
-  }*/
+  }
 </script>
 
 </body>
