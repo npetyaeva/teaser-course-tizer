@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Игра и творчество в жизни взрослых</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+
+	<a href="slide2.html" class="arrow-btn left">
+		<i class="fas fa-chevron-left"></i>
+	</a>
+	<a href="slide3_5.html" class="arrow-btn right">
+		<i class="fas fa-chevron-right"></i>
+	</a>
+
+	<div class="dots-nav">
+		<div class="dot"></div>
+		<div class="dot"></div>
+    <div class="dot"></div>
+		<div class="dot active"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+	</div>
+
+  <div class="container">
+    <div class="tags">
+      <span class="tag">ПРАКТИЧЕСКАЯ ЦЕННОСТЬ</span>
+    </div>
+    
+    <h2>Что вы сможете делать после курса?</h2>
+
+	<div class="main-text">
+		<div class="benefit-item">
+		  <div class="benefit-icon">
+			<span class="icon-circle"><i class="fas fa-check"></i></span>
+		  </div>
+		  <div class="benefit-content">
+			<p><span class="inline-title">Проводить диагностику</span><span class="inline-text-fix">своего когнитивного режима.</span></p>
+		  </div>
+		</div>
+
+	  <div class="benefit-item">
+		<div class="benefit-icon">
+		  <span class="icon-circle"><i class="fas fa-check"></i></span>
+		</div>
+		<div class="benefit-content">
+		  <p><span class="inline-title">Осознанно переключаться</span><span class="inline-text-fix">из рутины в творческий режим.</span></p>
+		</div>
+	  </div>
+
+	  <div class="benefit-item">
+		<div class="benefit-icon">
+		  <span class="icon-circle"><i class="fas fa-check"></i></span>
+		</div>
+		<div class="benefit-content">
+		  <p><span class="inline-title">Использовать матрицу творческого развития</span><span class="inline-text-fix">для решения сложных управленческих задач.</span></p>
+		</div>
+	  </div>
+
+	  <div class="benefit-item">
+		<div class="benefit-icon">
+		  <span class="icon-circle"><i class="fas fa-check"></i></span>
+		</div>
+		<div class="benefit-content">
+		  <p><span class="inline-title">Применять аспекты естественной игры</span><span class="inline-text-fix">с целью распознавать и преодолевать блокировки творческого мышления.</p>
+		</div>
+	  </div>
+	  
+	  <div class="benefit-item">
+		<div class="benefit-icon">
+		  <span class="icon-circle"><i class="fas fa-check"></i></span>
+		</div>
+		<div class="benefit-content">
+		  <p><span class="inline-title">Проектировать траекторию</span><span class="inline-text-fix">собственного когнитивного роста.</span></p>
+		</div>
+	  </div>
+	  
+	  <div class="benefit-item">
+		<div class="benefit-icon">
+		  <span class="icon-circle"><i class="fas fa-check"></i></span>
+		</div>
+		<div class="benefit-content">
+		  <p><span class="inline-title">Создавать развивающую среду</span><span class="inline-text-fix">для себя и команды.</span></p>
+		</div>
+	  </div>	  
+	  
+	</div>
+	</div>
+
+ <!--   <div class="bottom-nav">
+      <div class="pagination">
+        <a href="slide2.html" class="arrow-btn">
+          <i class="fas fa-chevron-left"></i>
+        </a>
+        
+        <a href="slide4.html" class="arrow-btn">
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+    </div>-->
+ 
+  <script>
+    if (window.Telegram?.WebApp) {
+      const tg = window.Telegram.WebApp;
+      tg.ready();
+      tg.expand();
+      tg.setHeaderColor('#0e0d0e');
+      tg.setBackgroundColor('#0e0d0e');
+    }
+  </script>
+
+</body>
+</html>
