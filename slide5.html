@@ -98,7 +98,7 @@
       tg.openTelegramLink(link);
       setTimeout(() => {
         tg.close();
-      }, 300);
+      }, 500);
     } else {
       window.open(link, '_blank');
     }
@@ -119,8 +119,7 @@
 
   function askQuestion() {
   const adminUsername = "NikPetyaev";
-  const text = "Здравствуйте! У меня есть вопрос по курсу «Игра и творчество»";
-  const link = `https://t.me/share/url?url=https://t.me/${adminUsername}&text=${encodeURIComponent(text)}`;
+  const link = `https://t.me/${adminUsername}`;
 
   if (tg && tg.HapticFeedback) {
     tg.HapticFeedback.selectionChanged();
@@ -129,17 +128,18 @@
   handleAction(link);
 }
 	
- /* function askQuestion() {
-    const adminUsername = "NikPetyaev";
-    const text = "Здравствуйте! У меня есть вопрос по курсу «Игра и творчество»";
-	const link = `https://t.me/share/url?url=https://t.me/${adminUsername}&text=${encodeURIComponent(text)}`;
+  /*function askQuestion() {
+  const adminUsername = "NikPetyaev";
+  const text = "Здравствуйте! У меня есть вопрос по курсу «Игра и творчество»";
+  const link = `https://t.me/share/url?url=https://t.me/${adminUsername}&text=${encodeURIComponent(text)}`;
 
-    if (tg && tg.HapticFeedback) {
-      tg.HapticFeedback.selectionChanged();
-    }
-    
-    handleAction(link);
-  }*/
+  if (tg && tg.HapticFeedback) {
+    tg.HapticFeedback.selectionChanged();
+  }
+  
+  handleAction(link);
+}*/
+
 </script>
 
 </body>
