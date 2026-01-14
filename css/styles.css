@@ -316,7 +316,7 @@ h2 {
 
 .buy-btn {
   display: inline-block;
-  padding: 8px 16px; 
+  padding: 8px 16px;       /* Увеличили боковые отступы внутри для формы */
   background: #B99EE2;
   color: #0e0d0e;
   text-decoration: none;
@@ -327,7 +327,7 @@ h2 {
   text-transform: uppercase;
   transition: all 0.3s ease;
   border: none;
-  width: fit-content; 
+  width: fit-content;    /* Кнопка сжимается точно под размер текста */
   align-self: flex-start;
   cursor: pointer;
 }
@@ -492,4 +492,18 @@ details[open] summary::after {
 
 .support-link i {
   font-size: 16px;
+}
+
+.inline-title {
+  display: inline;
+  font-weight: 500;
+  font-size: 16px;
+  color: #B99EE2;
+  margin-right: 4px;
+}
+
+.inline-text-fix {
+  display: inline !important;
+  font-size: 16px !important;
+  vertical-align: baseline;
 }
