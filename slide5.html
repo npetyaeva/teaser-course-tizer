@@ -118,16 +118,28 @@
   }
 
   function askQuestion() {
+  const adminUsername = "NikPetyaev";
+  const text = "Здравствуйте! У меня есть вопрос по курсу «Игра и творчество»";
+  const link = `https://t.me/share/url?url=https://t.me/${adminUsername}&text=${encodeURIComponent(text)}`;
+
+  if (tg && tg.HapticFeedback) {
+    tg.HapticFeedback.selectionChanged();
+  }
+  
+  handleAction(link);
+}
+	
+ /* function askQuestion() {
     const adminUsername = "NikPetyaev";
     const text = "Здравствуйте! У меня есть вопрос по курсу «Игра и творчество»";
-    const link = `https://t.me/${adminUsername}?text=${encodeURIComponent(text)}`;
+	const link = `https://t.me/share/url?url=https://t.me/${adminUsername}&text=${encodeURIComponent(text)}`;
 
     if (tg && tg.HapticFeedback) {
       tg.HapticFeedback.selectionChanged();
     }
     
     handleAction(link);
-  }
+  }*/
 </script>
 
 </body>
